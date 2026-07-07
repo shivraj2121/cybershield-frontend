@@ -14,7 +14,7 @@ function Register() {
     setLoading(true)
     setError('')
     try {
-      await axios.post('http://127.0.0.1:5000/api/register', { username, email, password })
+      await axios.post('https://cybershield-backend-hij1.onrender.com/api/register', { username, email, password })
       navigate('/')
     } catch (err) {
       setError(err.response?.data?.error || 'Registration failed!')

@@ -13,7 +13,7 @@ function Login() {
     setLoading(true)
     setError('')
     try {
-      const res = await axios.post('http://127.0.0.1:5000/api/login', { email, password })
+      const res = await axios.post('https://cybershield-backend-hij1.onrender.com/api/login', { email, password })
       localStorage.setItem('username', res.data.username)
       navigate('/dashboard')
     } catch (err) {

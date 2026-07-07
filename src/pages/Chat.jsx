@@ -17,7 +17,7 @@ function Chat() {
     setInput('')
     setLoading(true)
     try {
-      const res = await axios.post('http://127.0.0.1:5000/api/chat', { message: input })
+      const res = await axios.post('https://cybershield-backend-hij1.onrender.com/api/chat', { message: input })
       setMessages(prev => [...prev, { role: 'assistant', content: res.data.response }])
     } catch (err) {
       setMessages(prev => [...prev, { role: 'assistant', content: 'Sorry, something went wrong!' }])
